@@ -7,7 +7,7 @@ from sam2.build_sam import build_sam2
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 from ultralytics import YOLO
 
-from utils.helper_functions import show_mask
+from utils.helper_functions import show_mask, crop_image_from_bounding_box
 
 
 class SegmentLeafAreaUsingYoloSAM2:
@@ -16,7 +16,7 @@ class SegmentLeafAreaUsingYoloSAM2:
 
     # Checkpoint paths and model type definitions
     DEVICE = "cuda"
-    SAM2_CHECKPOINT_PATH = "utils/SAM_Model_Weights/SAM2/sam2_hiera_tiny.pt"
+    SAM2_CHECKPOINT_PATH = "utils/SAM_Model_Weights/sam2_hiera_tiny.pt"
     MODEL_CFG = "sam2_hiera_t.yaml"
     YOLO_MODEL_CHECKPOINT = "train_yolo_model/model_runs/results/weights/best.pt"
 
@@ -51,9 +51,10 @@ class SegmentLeafAreaUsingYoloSAM2:
         best_score = scores[scores.argmax()]
 
         if plot_segmentation:
-            show_mask(image, best_mask, best_score, self.output_dir, self.file_name)
+            show_mask(image, bounding_box, best_mask, best_score, self.output_dir, self.file_name)
 
-        return best_mask, best_score
+        cropped_mask = crop_image_from_bounding_box(best_mask, bounding_box)
+        return best_mask, cropped_mask
 
     def predict(self, image_path, plot_prediction=0):
         image = cv2.imread(image_path)
