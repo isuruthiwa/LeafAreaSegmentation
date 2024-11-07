@@ -1,5 +1,6 @@
-train: /home/isuruthiwa/Research/LAI/Medicinal Dataset/project-1-at-2024-07-24-16-30-6984386a/images/train
-val: /home/isuruthiwa/Research/LAI/Medicinal Dataset/project-1-at-2024-07-24-16-30-6984386a/images/val
+path: /home/isuruthiwa/Research/LAI/Medicinal Dataset/project-1-at-2024-07-24-16-30-6984386a/
+train: images/train
+val: images/val
 
-nc: 1
-names: ['Plant']
+names:
+  0: Plant

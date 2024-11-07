@@ -109,7 +109,7 @@ class LeafAreaIndexCalculator:
             mll = gpytorch.mlls.ExactMarginalLogLikelihood(likelihood, gpr)
 
             # Training loop
-            for j in range(50):
+            for j in range(100):
                 optimizer.zero_grad()
                 output = gpr(image_tensors)
                 loss = -mll(output, leaf_area_index_tensors)

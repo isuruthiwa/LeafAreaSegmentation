@@ -5,40 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2940d0ff-84bd-4cf1-8982-cb67a562c35c" name="Changes" comment="Add YoLov8 model and SAM model connection to determine plant leaf area">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/leafAreaSegmentation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_results/plot_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/predict_leaf_area_index.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/F1_curve.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/PR_curve.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/P_curve.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/R_curve.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/args.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/confusion_matrix.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/confusion_matrix_normalized.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/events.out.tfevents.1722267956.isuruthiwa-home-laptop.23174.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/labels.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/labels_correlogram.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/results.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/results.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/train_batch0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/train_batch1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/train_batch2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/val_batch0_labels.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/val_batch0_pred.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/val_batch1_labels.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/val_batch1_pred.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/model_runs/results/weights" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/yolov8n.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/sam2_configs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train_yolo_model/yolo11n.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segment_leaf_area_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/segment_leaf_area_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/helper_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helper_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_results/plot_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/output_results/plot_image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predict_leaf_area_index.py" beforeDir="false" afterPath="$PROJECT_DIR$/predict_leaf_area_index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/data.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/train_yolo_model/data.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/F1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/PR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/P_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/R_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/confusion_matrix_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/events.out.tfevents.1722267956.isuruthiwa-home-laptop.23174.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/val_batch0_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/val_batch0_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/val_batch1_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/val_batch1_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/train_yolo_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_yolo_model/train_yolo_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_yolo_model/yolov8n.pt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +90,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/isuruthiwa/Documents/leafAreaSegmentation&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -106,7 +99,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="leafAreaSegmentation" />
       <option name="ENV_FILES" value="" />
@@ -129,6 +122,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="train_yolo_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="leafAreaSegmentation" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/train_yolo_model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_yolo_model/train_yolo_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.train_yolo_model" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
