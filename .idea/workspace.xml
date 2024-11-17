@@ -5,33 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2940d0ff-84bd-4cf1-8982-cb67a562c35c" name="Changes" comment="Add YoLov8 model and SAM model connection to determine plant leaf area">
-      <change afterPath="$PROJECT_DIR$/train_yolo_model/yolo11n.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/.data/serialization_id" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/byteorder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/10" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/11" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/12" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/13" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/14" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/15" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/16" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/17" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/18" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/19" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/data/9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gpytorch_model/version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train_gpr_model_for_leaf_area.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leafAreaSegmentation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leafAreaSegmentation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_results/plot_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/output_results/plot_image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_results/plot_image.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/predict_leaf_area_index.py" beforeDir="false" afterPath="$PROJECT_DIR$/predict_leaf_area_index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/data.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/train_yolo_model/data.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/F1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/PR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/P_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/R_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/args.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/confusion_matrix_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/events.out.tfevents.1722267956.isuruthiwa-home-laptop.23174.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/labels_correlogram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/train_batch0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/train_batch1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/train_batch2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/val_batch0_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/val_batch0_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/val_batch1_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/model_runs/results/val_batch1_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/train_yolo_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_yolo_model/train_yolo_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_yolo_model/yolov8n.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/segment_leaf_area_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/segment_leaf_area_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helper_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helper_functions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +50,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -81,11 +91,14 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Python tests.Doctests in distance.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
     &quot;Python.helper_functions.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.predict_leaf_area_index.executor&quot;: &quot;Run&quot;,
     &quot;Python.segment_leaf_area_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_gpr_model_for_leaf_area.executor&quot;: &quot;Run&quot;,
     &quot;Python.train_yolo_model.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -99,7 +112,29 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="leafAreaSegmentation" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="leafAreaSegmentation" />
       <option name="ENV_FILES" value="" />
@@ -114,6 +149,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_gpr_model_for_leaf_area" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="leafAreaSegmentation" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_gpr_model_for_leaf_area.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,6 +203,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.train_gpr_model_for_leaf_area" />
         <item itemvalue="Python.train_yolo_model" />
       </list>
     </recent_temporary>
@@ -153,7 +212,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
       </set>
     </attachedChunks>
   </component>

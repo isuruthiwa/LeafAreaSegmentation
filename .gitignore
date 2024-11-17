@@ -1,3 +1,5 @@
 utils/SAM_Model_Weights
 utils/YOLO_Model_Weights
 train_yolo_model/model_runs
+/uploads/
+/output_results/

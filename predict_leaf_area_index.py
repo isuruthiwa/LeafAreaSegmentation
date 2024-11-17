@@ -36,6 +36,7 @@ class LAIGPModel(gpytorch.models.ExactGP):
 class LeafAreaIndexCalculator:
 
     segment_model = None
+    leaf_area_model = None
 
     def __init__(self):
         super().__init__()
@@ -74,7 +75,7 @@ class LeafAreaIndexCalculator:
                 mask, cropped_mask = self.segment_model.predict(image_file)
 
                 # Desired fixed size (3x3 in this case)
-                fixed_size = (300, 300)
+                fixed_size = (320, 320)
 
                 # Resize the 2D vector
 
@@ -96,6 +97,9 @@ class LeafAreaIndexCalculator:
             # Ensure that leaf_area_index_tensors is of correct shape
             leaf_area_index_tensors = leaf_area_index_tensors.view(-1)  # [batch_size]
 
+            print(image_tensors.shape)
+            print(leaf_area_index_tensors.shape)
+
             # initialize likelihood and model
             likelihood = gpytorch.likelihoods.GaussianLikelihood()
             gpr = LAIGPModel(image_tensors, leaf_area_index_tensors, likelihood)
@@ -115,30 +119,58 @@ class LeafAreaIndexCalculator:
                 loss = -mll(output, leaf_area_index_tensors)
                 loss.backward()
                 optimizer.step()
-                print(f'Iteration {j + 1}/50 - Loss: {loss.item()}')
+                print(f'Iteration {j + 1}/100 - Loss: {loss.item()}')
 
-        # Prediction
-        gpr.eval()
-        likelihood.eval()
+            # Save the model and likelihood
+            torch.save({
+                'model_state_dict': gpr.state_dict(),
+                'likelihood_state_dict': likelihood.state_dict(),
+                'train_inputs': gpr.train_inputs,
+                'train_targets': gpr.train_targets
+            }, 'gpytorch_model.pth')
+
+
+
+    def loadGPRModel(self):
+        if self.leaf_area_model is None:
+            # Load the saved state dictionaries
+            checkpoint = torch.load('gpytorch_model.pth')
+
+            # Initialize a new model and likelihood with the same architecture
+            loaded_likelihood = gpytorch.likelihoods.GaussianLikelihood()
+            loaded_likelihood.load_state_dict(checkpoint['likelihood_state_dict'])
+            loaded_model = LAIGPModel(checkpoint['train_inputs'], checkpoint['train_targets'], loaded_likelihood)
+            loaded_model.load_state_dict(checkpoint['model_state_dict'])
+
+            # Set the model and likelihood to evaluation mode
+            loaded_model.eval()
+            loaded_likelihood.eval()
+
+            self.leaf_area_model = loaded_model
+
+        return self.leaf_area_model
+
+    def predictLeafAreaIndex(self, image_under_test):
+        leaf_area_index_model = self.loadGPRModel()
 
         # Desired fixed size (3x3 in this case)
-        fixed_size = (300, 300)
-        for i in range(5):
-            test_image = image_files[1* self.batch_size + i]
-            mask, cropped_mask = self.segment_model.predict(test_image)
+        fixed_size = (320, 320)
+        mask, cropped_mask = self.segment_model.predict(image_under_test, 0)
 
-            # Resizing the 2D vector while maintaining aspect ratio
-            resized_vector = resize(cropped_mask, fixed_size, anti_aliasing=True)
-            resized_tensor = tensor(resized_vector.reshape(1, -1), dtype=torch.float32)
+        # Resizing the 2D vector while maintaining aspect ratio
+        resized_vector = resize(cropped_mask, fixed_size, anti_aliasing=True)
+        resized_tensor = tensor(resized_vector.reshape(1, -1), dtype=torch.float32)
 
-            # Reshape or flatten image_tensors
-            resized_tensor = resized_tensor.view(resized_tensor.size(0), -1)  # [batch_size, num_features]
+        # Reshape or flatten image_tensors
+        resized_tensor = resized_tensor.view(resized_tensor.size(0), -1)
 
-            # Predictions with uncertainty
-            with torch.no_grad(), gpytorch.settings.fast_pred_var():
-                predicted_LAI = gpr(resized_tensor)
-                mean = predicted_LAI.mean
-                lower, upper = predicted_LAI.confidence_region()
+        # Predictions with uncertainty
+        with torch.no_grad(), gpytorch.settings.fast_pred_var():
+            predicted_LAI = leaf_area_index_model(resized_tensor)
+            mean = predicted_LAI.mean
+            lower, upper = predicted_LAI.confidence_region()
 
-                print(test_image)
-                print(predicted_LAI)
+
+
+            return predicted_LAI.mean.item()
+

@@ -1,10 +1,11 @@
 # helper_functions.py
-
+import matplotlib
 import numpy as np
 from matplotlib import pyplot as plt, patches
+matplotlib.use('agg')
 
-
-def show_mask(image, bounding_box, mask, score, output_dir, file_name, random_color=False):
+def show_mask(image, plot, bounding_box, mask, score, output_dir, file_name, random_color=False):
+    plt.close()
     plt.imshow(image)
     if random_color:
         color = np.concatenate([np.random.random(3), np.array([0.6])], axis=0)
@@ -24,13 +25,13 @@ def show_mask(image, bounding_box, mask, score, output_dir, file_name, random_co
     # Add the rectangle to the plot
     plt.gca().add_patch(rect)
 
-    plt.title(f"Segmented Mask, Score: {score:.3f}", fontsize=18)
+    # plt.title(f"Segmented Mask, Score: {score:.3f}", fontsize=18)
 
     # Save the plot as an image
-    plt.savefig(f'{output_dir}/{file_name}', format='png', dpi=300)
+    plt.savefig(f'{output_dir}/{file_name}', format='png', dpi=300, bbox_inches='tight')
 
-    plt.show()
-
+    if plot:
+        plt.show()
 
 def crop_image_from_bounding_box(mask, bounding_box):
     # Crop the image using the bounding box
