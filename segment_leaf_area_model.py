@@ -1,8 +1,7 @@
 import os
 import cv2
-import torch
-import matplotlib.pyplot as plt
 import numpy as np
+import torch
 from sam2.build_sam import build_sam2
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 from ultralytics import YOLO
@@ -68,7 +67,5 @@ class SegmentLeafAreaUsingYoloSAM2:
 
     def predict(self, image_path, plot_prediction=0):
         image = cv2.imread(image_path)
-        print(image_path)
         bounding_box = self.getLeafAreaBoundingBox(image_path, 25)
-        print(bounding_box)
         return self.segmentLeafAreaFromSAM2(image, bounding_box, plot_prediction)
