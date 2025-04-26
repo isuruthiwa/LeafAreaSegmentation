@@ -46,7 +46,7 @@ def upload():
         print(f"Leaf area index : {lai}")
 
         # Return the URL of the processed image
-        return jsonify({"processed_image_url": f"/output_results/{os.path.basename(processed_path)}", "leaf_area_index": f"{lai}"})
+        return jsonify({"processed_image_url": f"/output_results/{os.path.basename(processed_path)}", "leaf_area_index": f"{lai:.4f}"})
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500

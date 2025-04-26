@@ -60,6 +60,8 @@ class SegmentLeafAreaUsingYoloSAM2:
         best_mask = masks[scores.argmax()]
         best_score = scores[scores.argmax()]
 
+        print("Prediction done")
+
         show_mask(image, plot_segmentation, bounding_box, best_mask, best_score, self.output_dir, self.file_name)
 
         cropped_mask = crop_image_from_bounding_box(best_mask, bounding_box)

@@ -5,7 +5,6 @@ from matplotlib import pyplot as plt, patches
 matplotlib.use('agg')
 
 def show_mask(image, plot, bounding_box, mask, score, output_dir, file_name, random_color=False):
-    plt.close()
     plt.imshow(image)
     if random_color:
         color = np.concatenate([np.random.random(3), np.array([0.6])], axis=0)
@@ -32,6 +31,8 @@ def show_mask(image, plot, bounding_box, mask, score, output_dir, file_name, ran
 
     if plot:
         plt.show()
+
+    plt.close()
 
 def crop_image_from_bounding_box(mask, bounding_box):
     # Crop the image using the bounding box
